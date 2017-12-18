@@ -1,0 +1,131 @@
+@import "variables";
+@import "mixin";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/******************/
+/****** RESET *****/
+/******************/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+/******************/
+/*** COMMON *******/
+/******************/
+header {
+  width: 100%;
+  height: 10%;
+}
+
+.grid-container {
+  display: grid;
+  width: $width-grid-container;
+  height: 100%;
+  margin: 0 auto;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: $width-column-gap;
+}
+
+.main-nav {
+  grid-column: 1 / span 9;
+  background-color: $color-bg-main-nav;
+  height: 100%;
+}
+
+.side-bar-news,
+.side-bar-publication {
+  grid-column: 10 / span 3;
+  background-color: $color-bg-side-bar-news;
+  height: 100%;
+}
+/*******************************/
+/*** HOME **********************/
+/*******************************/
+.main-nav {
+  display: flex;
+
+  h1 {
+    font-family: $font-type-nav;
+    font-size: $font-size-nav;
+    text-transform: uppercase;
+
+    .participant {
+      font-style: italic;
+      text-decoration: underline;
+    }
+  }
+}
+
+.side-bar-news {
+  .side-bar-title {
+    @extend %side-bar-style;
+  }
+
+  p {
+    font-size: $font-size-news-content;
+    font-family: $font-type-side-bar;
+    padding-bottom: $padding-news-content;
+    line-height: $height-news-content;
+  }
+}
+/*************************************************************/
+/******* RESEARCH ********************************************/
+/*************************************************************/
+.main-research {
+  grid-column: 1 / span 6;
+  background-color: $color-bg-main-research;
+  height: 100%;
+}
+
+.main-research {
+  .research-title {
+    font-size: $font-size-research-title;
+    color: $color-research-title;
+    padding-bottom: $padding-main-title;
+  }
+
+  p {
+    font-size: $font-size-research-content;
+    color: $color-research-content;
+    line-height: $height-research-content;
+    font-size: $font-size-research-content;
+  }
+
+  div[class|="image-cna"] {
+    display: inline-block;
+  }
+
+  .image-cna-face {
+    background: url("#{$root-path}/image/CNA_1.png") 0 0;
+    width: 450px;
+    height: 225px;
+    margin: 40px 0;
+  }
+}
+
+.side-bar-publication {
+  .side-bar-title {
+    @extend %side-bar-style;
+  }
+
+  .publication-content {
+    height: 25%;
+    overflow: hidden;
+  }
+
+  p {
+    padding-bottom: $padding-publication-content;
+    font-size: $font-size-publication-content;
+    line-height: 22px;
+  }
+
+  .journal {
+    color: $color-font-journal;
+  }
+}
