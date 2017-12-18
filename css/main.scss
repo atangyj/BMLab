@@ -169,3 +169,13 @@ header {
 .side-bar-alumni {
   grid-column: 10 / span 3;
 }
+/**********************************/
+/******** CONTACT *****************/
+/**********************************/
+.main-contact {
+  grid-column: 1 / span 6;
+}
+
+.contact-title {
+  font-size: $font-size-main-title;
+}

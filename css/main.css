@@ -48,7 +48,7 @@ header {
   height: 100%;
   margin: 0 auto;
   grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 20px; }
+  grid-column-gap: 0; }
 
 .main-nav {
   grid-column: 1 / span 9;
@@ -139,5 +139,14 @@ header {
 
 .side-bar-alumni {
   grid-column: 10 / span 3; }
+
+/**********************************/
+/******** CONTACT *****************/
+/**********************************/
+.main-contact {
+  grid-column: 1 / span 6; }
+
+.contact-title {
+  font-size: 40px; }
 
 /*# sourceMappingURL=main.css.map */
