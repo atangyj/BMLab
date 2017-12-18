@@ -1,24 +1,21 @@
 $width-grid-container: 80%;
-$width-column-gap: 0;
+$width-column-gap: 40px;
 $width-photo: 100%;
 $height-photo: auto;
 /*****************/
 /**** COLOR ******/
 /*****************/
-$color-bg-main-nav: #fff;
-$color-bg-side-bar-news: #fff;
-$color-main-title: #000;
-$color-research-content: #000;
-$color-bg-main-research: #fff;
+$color-bg: rgb(247,247,247);
+$color-header: rgb(10,25,156);
 $color-font-journal: grey;
+$color-font-main-nav: #fff;
 /*****************/
 /**** FONT *******/
 /*****************/
-$font-size-nav: 90px;
+$font-size-nav: 87px;
 $font-size-side-title: 16px;
 $font-size-news-content: 16px;
 $font-size-main-title: 40px;
-$font-size-research-content: 16px;
 $font-size-publication-content: 16px;
 $font-type-nav: 'Roboto', sans-serif;
 $font-type-side-bar: 'Roboto', sans-serif;
