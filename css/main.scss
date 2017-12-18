@@ -84,11 +84,7 @@ header {
 }
 
 .main-research {
-  .research-title {
-    font-size: $font-size-research-title;
-    color: $color-research-title;
-    padding-bottom: $padding-main-title;
-  }
+  @extend %style-main-title;
 
   p {
     font-size: $font-size-research-content;
@@ -128,4 +124,48 @@ header {
   .journal {
     color: $color-font-journal;
   }
+}
+/**************************************/
+/************ MEMBET ******************/
+/**************************************/
+.member-title {
+  grid-column: 1 / span 12;
+  @extend %style-main-title;
+}
+
+.main-person {
+  grid-column: 1 / span 8;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 80px 40px;
+
+  .pi {
+    width: 210px;
+  }
+
+  .person:first-child {
+    grid-column: 1 / span 3;
+  }
+
+  .person {
+    display: inline-block;
+
+    img {
+      width: $width-photo;
+      height: auto;
+      padding-bottom: 10px;
+    }
+
+    .position {
+      font-weight: bold;
+    }
+
+    span::before {
+      content: " ";
+    }
+  }
+}
+
+.side-bar-alumni {
+  grid-column: 10 / span 3;
 }

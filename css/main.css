@@ -17,6 +17,11 @@ $row-gap-width:;*/
   font-family: "Roboto", sans-serif;
   padding-bottom: 15px; }
 
+.main-research, .member-title {
+  font-size: 40px;
+  color: #000;
+  padding-bottom: 60px; }
+
 /******************/
 /****** RESET *****/
 /******************/
@@ -43,7 +48,7 @@ header {
   height: 100%;
   margin: 0 auto;
   grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 0; }
+  grid-column-gap: 20px; }
 
 .main-nav {
   grid-column: 1 / span 9;
@@ -83,10 +88,6 @@ header {
   background-color: #fff;
   height: 100%; }
 
-.main-research .research-title {
-  font-size: 40px;
-  color: #000;
-  padding-bottom: 60px; }
 .main-research p {
   font-size: 16px;
   color: #000;
@@ -109,5 +110,34 @@ header {
   line-height: 22px; }
 .side-bar-publication .journal {
   color: grey; }
+
+/**************************************/
+/************ MEMBET ******************/
+/**************************************/
+.member-title {
+  grid-column: 1 / span 12; }
+
+.main-person {
+  grid-column: 1 / span 8;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 80px 40px; }
+  .main-person .pi {
+    width: 210px; }
+  .main-person .person:first-child {
+    grid-column: 1 / span 3; }
+  .main-person .person {
+    display: inline-block; }
+    .main-person .person img {
+      width: 100%;
+      height: auto;
+      padding-bottom: 10px; }
+    .main-person .person .position {
+      font-weight: bold; }
+    .main-person .person span::before {
+      content: " "; }
+
+.side-bar-alumni {
+  grid-column: 10 / span 3; }
 
 /*# sourceMappingURL=main.css.map */

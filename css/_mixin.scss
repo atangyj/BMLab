@@ -3,3 +3,9 @@
   font-family: $font-type-side-bar;
   padding-bottom: $padding-side-bar-title;
 }
+
+%style-main-title {
+  font-size: $font-size-main-title;
+  color: $color-main-title;
+  padding-bottom: $padding-main-title;
+}
