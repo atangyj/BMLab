@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="./css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header>
+    <div class="nav-bar">
+      <a href="./index.member">member</a>
+      <a href="./index.html">publication</a>
+      <a href="./index.html">be participants</a>
+    </div>
+  </header>
+
+  <div class="grid-container">
+    <div class="experiment-list">
+
+      <table>
+        <thead class="accordion">
+          <tr>
+            <td colspan="4">老年認知與腦影像研究</td>
+          </tr>
+
+        </thead>
+        <tbody class="panel">
+          <tr>
+            <td>01 磁振造影掃描</td>
+            <td>一開始參加者根據電腦螢幕所呈現的訊息按按鍵反應，接著只需躺在儀器中休息。過程中研究人員以非侵入方式掃描腦部與結構。
+            </td>
+            <td>2 小時</td>
+            <td>政治大學腦影像中心</td>
+          </tr>
+
+          <tr>
+            <td>02 神經心理測驗</td>
+            <td>參加者根據自身狀況填寫量表，或根據研究人員的提問作出回答。
+            </td>
+            <td>3 小時</td>
+            <td>臺大醫學院基醫大樓 1554 室</td>
+          </tr>
+
+          <tr>
+            <td>03 飲食攝取紀錄</td>
+            <td>磁振造影掃描結束後，研究人員會教導參加者如何記錄自己的飲食內容。
+            </td>
+            <td>1-4 週</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>04 腦電波實驗</td>
+            <td>參加者根據電腦螢幕所呈現的訊息按按鍵反應，過程中研究人員利用電位感應器從頭皮表面記錄腦電波反應。
+            </td>
+            <td>3 小時</td>
+            <td>臺大醫學院基醫大樓 1554 室</td>
+          </tr>
+        </tbody>
+        <thead class="accordion">
+          <tr>
+            <td colspan="4">老年認知與腦影像研究</td>
+          </tr>
+
+        </thead>
+        <tbody class="panel">
+          <tr>
+            <td>01 磁振造影掃描</td>
+            <td>一開始參加者根據電腦螢幕所呈現的訊息按按鍵反應，接著只需躺在儀器中休息。過程中研究人員以非侵入方式掃描腦部與結構。
+            </td>
+            <td>2 小時</td>
+            <td>政治大學腦影像中心</td>
+          </tr>
+
+          <tr>
+            <td>02 神經心理測驗</td>
+            <td>參加者根據自身狀況填寫量表，或根據研究人員的提問作出回答。
+            </td>
+            <td>3 小時</td>
+            <td>臺大醫學院基醫大樓 1554 室</td>
+          </tr>
+
+          <tr>
+            <td>03 飲食攝取紀錄</td>
+            <td>磁振造影掃描結束後，研究人員會教導參加者如何記錄自己的飲食內容。
+            </td>
+            <td>1-4 週</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>04 腦電波實驗</td>
+            <td>參加者根據電腦螢幕所呈現的訊息按按鍵反應，過程中研究人員利用電位感應器從頭皮表面記錄腦電波反應。
+            </td>
+            <td>3 小時</td>
+            <td>臺大醫學院基醫大樓 1554 室</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+
+</body>

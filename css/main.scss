@@ -274,3 +274,71 @@ header {
     font-style: italic;
   }
 }
+/*************************************/
+/********** participant **************/
+/*************************************/
+.experiment-list {
+  grid-column: 1 / span 9;
+
+  table {
+    width: 100%;
+    background-color: #fff;
+    color: $color-header;
+    border-collapse: collapse;
+
+    .accordion {
+      cursor: pointer;
+
+      tr {
+        border: 3px solid $color-header;
+        height: 100px;
+        vertical-align: text-top;
+
+        td {
+          padding: 15px;
+        }
+      }
+
+      .accordion {
+        text-align: left;
+        vertical-align: text-top;
+      }
+    }
+
+    .accordion:hover {
+      background-color: $color-header;
+      color: #fff;
+    }
+
+    .panel {
+      display: none;
+
+      td {
+        height: 100px;
+        font-size: 12px;
+        line-height: 20px;
+        vertical-align: text-top;
+        padding: 15px;
+        border: 3px solid $color-header;
+        border-top: none;
+      }
+
+      td:first-child {
+        width: 18%;
+      }
+
+      td:nth-child(3) {
+        width: 10%;
+      }
+
+      td:nth-child(4) {
+        width: 20%;
+      }
+    }
+  }
+}
+
+.active {
+  background-color: $color-header;
+  color: #fff;
+}
