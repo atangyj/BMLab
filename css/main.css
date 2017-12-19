@@ -37,7 +37,7 @@ $row-gap-width:;*/
   line-height: 24px;
   color: #0a199c; }
 
-.research-title, .main-research, .member-title {
+.research-title, .main-research, .member-title, .publication-title {
   font-size: 80px;
   color: #0a199c;
   padding-bottom: 60px;
@@ -60,6 +60,12 @@ $row-gap-width:;*/
   font-size: 16px;
   line-height: 24px;
   color: #5c5c5c; }
+
+.article-left-column a, .article-left-column .journal, .abstract-right-column a, .abstract-right-column .conference {
+  font-size: 16px;
+  line-height: 24px;
+  color: #5c5c5c;
+  font-weight: lighter; }
 
 /******************/
 /****** RESET *****/
@@ -200,5 +206,35 @@ header {
 
 .contact-title {
   font-size: 40px; }
+
+/**********************************/
+/******** PUBLICATION *****************/
+/**********************************/
+.publication-title {
+  grid-column: 1 / span 12; }
+
+.article-left-column {
+  grid-column: 1 / span 6; }
+  .article-left-column h3 {
+    padding-bottom: 30px;
+    color: #0a199c; }
+  .article-left-column p {
+    padding-bottom: 15px; }
+  .article-left-column a {
+    text-decoration: none; }
+  .article-left-column .journal {
+    font-style: italic; }
+
+.abstract-right-column {
+  grid-column: 7 / span 6; }
+  .abstract-right-column h3 {
+    padding-bottom: 30px;
+    color: #0a199c; }
+  .abstract-right-column p {
+    padding-bottom: 15px; }
+  .abstract-right-column a {
+    text-decoration: none; }
+  .abstract-right-column .conference {
+    font-style: italic; }
 
 /*# sourceMappingURL=main.css.map */
