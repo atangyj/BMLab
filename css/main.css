@@ -11,7 +11,6 @@
 $column-gap-width:;
 $row-width:;
 $row-gap-width:;*/
-@import url("https://fonts.googleapis.com/css?family=Roboto");
 .nav-bar a {
   text-decoration: none;
   text-transform: uppercase;
@@ -42,7 +41,7 @@ $row-gap-width:;*/
   font-size: 80px;
   color: #0a199c;
   padding-bottom: 60px;
-  font-weight: bold; }
+  font-weight: 700; }
 
 .main-research p {
   font-size: 16px;
@@ -55,6 +54,11 @@ $row-gap-width:;*/
   font-size: 14px;
   padding-bottom: 16px;
   line-height: 20px;
+  color: #5c5c5c; }
+
+.main-people .person .name, .main-people .person .position {
+  font-size: 16px;
+  line-height: 24px;
   color: #5c5c5c; }
 
 /******************/
@@ -149,31 +153,27 @@ header {
 /**************************************/
 /************ MEMBER ******************/
 /**************************************/
+.main-people,
 .member-title {
   grid-column: 1 / span 12; }
 
-.main-person {
-  grid-column: 1 / span 8;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 80px 40px; }
-  .main-person .pi {
-    width: 210px; }
-  .main-person .person:first-child {
-    grid-column: 1 / span 3; }
-  .main-person .person {
-    display: inline-block; }
-    .main-person .person img {
-      width: 100%;
-      height: auto;
-      padding-bottom: 10px; }
-    .main-person .person .position {
-      font-weight: bold; }
-    .main-person .person span::before {
+.main-people {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .main-people .person {
+    margin-bottom: 80px;
+    padding: 0 20px; }
+    .main-people .person img {
+      width: 200px;
+      padding-bottom: 15px;
+      filter: grayscale(100%); }
+    .main-people .person img[src*="noPhoto"] {
+      opacity: 0.2; }
+    .main-people .person span::before {
       content: " "; }
-
-.side-bar-alumni {
-  grid-column: 10 / span 3; }
+    .main-people .person .name {
+      font-weight: 700; }
 
 /**********************************/
 /******** CONTACT *****************/

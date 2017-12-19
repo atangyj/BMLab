@@ -1,6 +1,5 @@
 @import "variables";
 @import "mixin";
-@import url('https://fonts.googleapis.com/css?family=Roboto');
 /******************/
 /****** RESET *****/
 /******************/
@@ -152,46 +151,47 @@ header {
 /**************************************/
 /************ MEMBER ******************/
 /**************************************/
+.main-people,
 .member-title {
   grid-column: 1 / span 12;
+}
+
+.member-title {
   @extend %style-main-title;
 }
 
-.main-person {
-  grid-column: 1 / span 8;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 80px 40px;
-
-  .pi {
-    width: 210px;
-  }
-
-  .person:first-child {
-    grid-column: 1 / span 3;
-  }
+.main-people {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   .person {
-    display: inline-block;
+    margin-bottom: 80px;
+    padding: 0 20px;
 
     img {
-      width: $width-photo;
-      height: auto;
-      padding-bottom: 10px;
+      width: 200px;
+      padding-bottom: 15px;
+      filter: grayscale(100%);
     }
 
-    .position {
-      font-weight: bold;
+    img[src*="noPhoto"] {
+      opacity: 0.2;
     }
 
     span::before {
       content: " ";
     }
-  }
-}
 
-.side-bar-alumni {
-  grid-column: 10 / span 3;
+    .name {
+      @extend %style-member-name;
+      font-weight: 700;
+    }
+
+    .position {
+      @extend %style-member-name;
+    }
+  }
 }
 /**********************************/
 /******** CONTACT *****************/
