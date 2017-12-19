@@ -89,7 +89,7 @@ header {
 /******* RESEARCH ********************************************/
 /*************************************************************/
 .research-title {
-  grid-column: 1 / span 6;
+  grid-column: 1 / span 12;
   @extend %style-main-title;
 }
 
@@ -147,6 +147,24 @@ header {
   .journal {
     font-style: italic;
   }
+}
+/**************************************/
+/************ RESEARCH 2 ******************/
+/**************************************/
+.image-ccn-1 {
+  background: url("#{$root-path}/image/CCN_1.png") 0 0 no-repeat;
+  width: 400px;
+  height: 300px;
+  background-size: 100%;
+  padding-bottom: 30px;
+}
+
+.image-ccn-2 {
+  background: url("#{$root-path}/image/CCN_2.png") 0 0 no-repeat;
+  width: 800px;
+  height: 300px;
+  background-size: 100%;
+  padding-bottom: 30px;
 }
 /**************************************/
 /************ MEMBER ******************/
