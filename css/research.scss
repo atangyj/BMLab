@@ -63,12 +63,14 @@ header {
     color: $color-main-dark;
   }
 
-  .accociated-content-text {
+  .associated-content-text {
     p {
       @extend %style-associated-content-text;
 
       .journal {
         font-style: italic;
+        font-size: 14px;
+        color: $color-main-reading;
       }
     }
   }
