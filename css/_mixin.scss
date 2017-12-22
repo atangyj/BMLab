@@ -1,14 +1,14 @@
 %style-header-nav {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 50px;
   color: #fff;
   padding: 0 25px;
 }
 
 %style-main-nav {
-  font-size: 87px;
+  font-size: 80px;
   text-transform: uppercase;
   text-decoration: none;
   color: rgb(10,25,156);
@@ -19,6 +19,7 @@
   font-weight: bold;
   padding-bottom: 16px;
   color: rgb(10,25,156);
+  text-transform: uppercase;
 }
 
 %style-side-bar-content {
@@ -61,4 +62,18 @@
   line-height: 24px;
   color: rgb(92,92,92);
   font-weight: lighter;
+}
+
+%style-alumni {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(92,92,92);
+  padding-bottom: 16px;
+}
+
+%style-collaborator {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(92,92,92);
+  padding-bottom: 16px;
 }

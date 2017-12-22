@@ -2,6 +2,7 @@ $width-grid-container: 80%;
 $width-column-gap: 40px;
 $width-photo: 80%;
 $height-photo: auto;
+$height-margin-top-main-title: 200px;
 /*****************/
 /**** COLOR ******/
 /*****************/
@@ -9,10 +10,11 @@ $color-bg: rgb(247,247,247);
 $color-header: rgb(10,25,156);
 $color-font-journal: grey;
 $color-font-main-nav: #fff;
+$color-header-opacity: rgba(10,25,156, 0.9);
 /*****************/
 /**** FONT *******/
 /*****************/
-$font-size-nav: 87px;
+$font-size-nav: 60px;
 $font-size-side-title: 16px;
 $font-size-news-content: 16px;
 $font-size-main-title: 40px;

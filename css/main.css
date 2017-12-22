@@ -14,13 +14,13 @@ $row-gap-width:;*/
 .nav-bar a {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 50px;
   color: #fff;
   padding: 0 25px; }
 
 .main-nav h1 a {
-  font-size: 87px;
+  font-size: 80px;
   text-transform: uppercase;
   text-decoration: none;
   color: #0a199c; }
@@ -29,7 +29,8 @@ $row-gap-width:;*/
   font-size: 16px;
   font-weight: bold;
   padding-bottom: 16px;
-  color: #0a199c; }
+  color: #0a199c;
+  text-transform: uppercase; }
 
 .side-bar-news p {
   font-size: 16px;
@@ -37,7 +38,7 @@ $row-gap-width:;*/
   line-height: 24px;
   color: #0a199c; }
 
-.research-title, .main-research, .member-title, .publication-title {
+.research-title, .main-research, .publication-title {
   font-size: 80px;
   color: #0a199c;
   padding-bottom: 60px;
@@ -67,6 +68,18 @@ $row-gap-width:;*/
   color: #5c5c5c;
   font-weight: lighter; }
 
+.side-bar-alumni p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #5c5c5c;
+  padding-bottom: 16px; }
+
+.side-bar-collaborator {
+  font-size: 16px;
+  line-height: 24px;
+  color: #5c5c5c;
+  padding-bottom: 16px; }
+
 /******************/
 /****** RESET *****/
 /******************/
@@ -88,8 +101,10 @@ html {
 header {
   width: 100%;
   height: 50px;
-  background-color: #0a199c;
-  margin-bottom: 100px; }
+  background-color: rgba(10, 25, 156, 0.9);
+  position: fixed;
+  box-shadow: 0 1px 5px #000;
+  z-index: 10; }
 
 .nav-bar {
   width: 80%;
@@ -100,7 +115,7 @@ header {
 .grid-container {
   display: grid;
   width: 80%;
-  height: autox;
+  height: auto;
   margin: 0 auto;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
@@ -109,25 +124,62 @@ header {
 /*******************************/
 /*** HOME **********************/
 /*******************************/
+/*****************/
+/**** NAV ********/
+/*****************/
+.header-blank {
+  grid-column: 1 / span 12;
+  height: 150px; }
+
 .main-nav {
   grid-column: 1 / span 9;
-  height: 80%; }
+  box-sizing: border-box; }
 
-.side-bar-news,
-.side-bar-publication {
+.side-bar-news {
   grid-column: 10 / span 3;
-  height: 80%; }
+  box-sizing: border-box; }
 
 .main-nav h1 a:hover {
   text-decoration: underline; }
 .main-nav .participant {
   font-style: italic; }
 
+/******************************************/
+/************ MASQUEE *********************/
+/******************************************/
+.container {
+  width: 35px;
+  height: 100%;
+  background-color: #0a199c;
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.masquee {
+  width: 500px;
+  height: 35px;
+  line-height: 35px;
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+  animation: masquee 15s linear infinite;
+  position: fixed;
+  top: 0;
+  right: -465px; }
+  .masquee p {
+    color: #fff;
+    transform: translateY(-100%); }
+
+@keyframes masquee {
+  from {
+    top: 100%; }
+  to {
+    top: -100%; } }
 /*************************************************************/
 /******* RESEARCH ********************************************/
 /*************************************************************/
 .research-title {
-  grid-column: 1 / span 12; }
+  grid-column: 1 / span 7;
+  margin-top: 200px; }
 
 .main-research {
   grid-column: 1 / span 7;
@@ -150,11 +202,13 @@ header {
   width: 1024px;
   height: 449px; }
 
-.side-bar-publication .publication-content {
-  height: 25%;
-  overflow: hidden; }
-.side-bar-publication .journal {
-  font-style: italic; }
+.side-bar-publication {
+  grid-column: 10 / span 3; }
+  .side-bar-publication .publication-content {
+    height: 25%;
+    overflow: hidden; }
+  .side-bar-publication .journal {
+    font-style: italic; }
 
 /**************************************/
 /************ RESEARCH 2 ******************/
@@ -176,11 +230,18 @@ header {
 /**************************************/
 /************ MEMBER ******************/
 /**************************************/
-.main-people,
 .member-title {
-  grid-column: 1 / span 12; }
+  grid-column: 1 / span 12;
+  margin-top: 200px;
+  font-size: 70px;
+  color: #0a199c;
+  padding-bottom: 200px;
+  font-weight: 700;
+  text-align: center;
+  /*@extend %style-main-title;*/ }
 
 .main-people {
+  grid-column: 1 / span 12;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
@@ -198,6 +259,12 @@ header {
     .main-people .person .name {
       font-weight: 700; }
 
+.side-bar-alumni {
+  grid-column: 1 / span 4; }
+
+.side-bar-collaborator {
+  grid-column: 5 / span 8; }
+
 /**********************************/
 /******** CONTACT *****************/
 /**********************************/
@@ -211,7 +278,8 @@ header {
 /******** PUBLICATION *****************/
 /**********************************/
 .publication-title {
-  grid-column: 1 / span 12; }
+  grid-column: 1 / span 12;
+  margin-top: 200px; }
 
 .article-left-column {
   grid-column: 1 / span 6; }
@@ -248,16 +316,15 @@ header {
     color: #0a199c;
     border-collapse: collapse; }
     .experiment-list table .accordion {
-      cursor: pointer; }
+      cursor: pointer;
+      text-align: left;
+      vertical-align: text-top; }
       .experiment-list table .accordion tr {
         border: 3px solid #0a199c;
         height: 100px;
         vertical-align: text-top; }
         .experiment-list table .accordion tr td {
           padding: 15px; }
-      .experiment-list table .accordion .accordion {
-        text-align: left;
-        vertical-align: text-top; }
     .experiment-list table .accordion:hover {
       background-color: #0a199c;
       color: #fff; }
@@ -277,9 +344,18 @@ header {
         width: 10%; }
       .experiment-list table .panel td:nth-child(4) {
         width: 20%; }
+      .experiment-list table .panel tr:last-child {
+        background-color: #0a199c;
+        color: #fff; }
+        .experiment-list table .panel tr:last-child td {
+          height: 30px;
+          text-align: center;
+          line-height: 30px;
+          padding: 0; }
 
 .active {
   background-color: #0a199c;
+  background-clip: padding-box;
   color: #fff; }
 
 /*# sourceMappingURL=main.css.map */

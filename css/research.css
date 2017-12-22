@@ -1,0 +1,76 @@
+.container-inner .research-title {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 90px;
+  padding: 30px 0; }
+
+.container-inner .research-desc {
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 50px;
+  padding: 0 0 30px; }
+
+.container-outer {
+  border-top: 5px solid #0a199c; }
+
+.container-outer .research-topic {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 50px;
+  padding: 15px 0 30px; }
+
+.container-outer .main-content {
+  font-size: 16px;
+  line-height: 24px;
+  color: grey; }
+
+.container-outer .associated-content .associated-content-title, .container-outer .associated-content .accociated-content-text p {
+  font-size: 16px;
+  line-height: 24px;
+  color: grey; }
+
+/*****************************/
+/**********COMMON*************/
+/*****************************/
+.container-inner {
+  width: 80%;
+  margin: 0 auto; }
+
+.container-outer {
+  width: 100%; }
+  .container-outer .main-content .image-cna-1-face {
+    background: url("../image/CNA_1.png") 0 0;
+    width: 470px;
+    height: 225px;
+    margin: 40px 0; }
+  .container-outer .main-content .image-cna-1-brain {
+    background: url("../image/CNA_1.png") 0 -223px;
+    width: 470px;
+    height: 230px;
+    margin: 0 0 40px; }
+  .container-outer .main-content .image-cna-2-plot {
+    background: url("../image/CNA_2.png") 0 0;
+    width: 1024px;
+    height: 449px; }
+  .container-outer .associated-content .associated-content-title {
+    font-weight: bold;
+    color: #0a199c; }
+  .container-outer .associated-content .accociated-content-text p .journal {
+    font-style: italic; }
+
+/***** container-outer ****/
+.accordion {
+  cursor: pointer; }
+
+.panel {
+  display: none; }
+  .panel .container-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .panel .container-inner .main-content {
+      flex: 0 0 60%; }
+    .panel .container-inner .associated-content {
+      flex: 0 0 250px; }
+
+/*# sourceMappingURL=research.css.map */

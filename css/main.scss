@@ -22,8 +22,10 @@ html {
 header {
   width: 100%;
   height: 50px;
-  background-color: $color-header;
-  margin-bottom: 100px;
+  background-color: $color-header-opacity;
+  position: fixed;
+  box-shadow: 0 1px 5px #000;
+  z-index: 10;
 }
 
 .nav-bar {
@@ -40,7 +42,7 @@ header {
 .grid-container {
   display: grid;
   width: $width-grid-container;
-  height: autox;
+  height: auto;
   margin: 0 auto;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
@@ -49,15 +51,22 @@ header {
 /*******************************/
 /*** HOME **********************/
 /*******************************/
-.main-nav {
-  grid-column: 1 / span 9;
-  height: 80%;
+/*****************/
+/**** NAV ********/
+/*****************/
+.header-blank {
+  grid-column: 1 / span 12;
+  height: 150px;
 }
 
-.side-bar-news,
-.side-bar-publication {
+.main-nav {
+  grid-column: 1 / span 9;
+  box-sizing: border-box;
+}
+
+.side-bar-news {
   grid-column: 10 / span 3;
-  height: 80%;
+  box-sizing: border-box;
 }
 
 .main-nav {
@@ -85,12 +94,50 @@ header {
     @extend %style-side-bar-content;
   }
 }
+/******************************************/
+/************ MASQUEE *********************/
+/******************************************/
+.container {
+  width: 35px;
+  height: 100%;
+  background-color: $color-header;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.masquee {
+  width: 500px;
+  height: 35px;
+  line-height: 35px;
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+  animation: masquee 15s linear infinite;
+  position: fixed;
+  top: 0;
+  right: -465px;
+
+  p {
+    color: #fff;
+    transform: translateY(-100%);
+  }
+}
+@keyframes masquee {
+  from {
+    top: 100%;
+  }
+
+  to {
+    top: -100%;
+  }
+}
 /*************************************************************/
 /******* RESEARCH ********************************************/
 /*************************************************************/
 .research-title {
-  grid-column: 1 / span 12;
+  grid-column: 1 / span 7;
   @extend %style-main-title;
+  margin-top: $height-margin-top-main-title;
 }
 
 .main-research {
@@ -131,6 +178,8 @@ header {
 }
 
 .side-bar-publication {
+  grid-column: 10 / span 3;
+
   .side-bar-title {
     @extend %style-side-bar-title;
   }
@@ -169,16 +218,19 @@ header {
 /**************************************/
 /************ MEMBER ******************/
 /**************************************/
-.main-people,
 .member-title {
   grid-column: 1 / span 12;
-}
-
-.member-title {
-  @extend %style-main-title;
+  margin-top: $height-margin-top-main-title;
+  font-size: 70px;
+  color: rgb(10,25,156);
+  padding-bottom: $height-margin-top-main-title;
+  font-weight: 700;
+  text-align: center;
+  /*@extend %style-main-title;*/
 }
 
 .main-people {
+  grid-column: 1 / span 12;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -211,6 +263,19 @@ header {
     }
   }
 }
+
+.side-bar-alumni {
+  grid-column: 1 / span 4;
+
+  p {
+    @extend %style-alumni;
+  }
+}
+
+.side-bar-collaborator {
+  grid-column: 5 / span 8;
+  @extend %style-collaborator;
+}
 /**********************************/
 /******** CONTACT *****************/
 /**********************************/
@@ -227,6 +292,7 @@ header {
 .publication-title {
   grid-column: 1 / span 12;
   @extend %style-main-title;
+  margin-top: $height-margin-top-main-title;
 }
 
 .article-left-column {
@@ -288,6 +354,8 @@ header {
 
     .accordion {
       cursor: pointer;
+      text-align: left;
+      vertical-align: text-top;
 
       tr {
         border: 3px solid $color-header;
@@ -297,11 +365,6 @@ header {
         td {
           padding: 15px;
         }
-      }
-
-      .accordion {
-        text-align: left;
-        vertical-align: text-top;
       }
     }
 
@@ -334,11 +397,24 @@ header {
       td:nth-child(4) {
         width: 20%;
       }
+
+      tr:last-child {
+        background-color: $color-header;
+        color: #fff;
+
+        td {
+          height: 30px;
+          text-align: center;
+          line-height: 30px;
+          padding: 0;
+        }
+      }
     }
   }
 }
 
 .active {
   background-color: $color-header;
+  background-clip: padding-box;
   color: #fff;
 }

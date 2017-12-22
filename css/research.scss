@@ -1,0 +1,92 @@
+@import "variables_research";
+/*****************************/
+/**********COMMON*************/
+/*****************************/
+header {}
+
+.container-inner {
+  width: $width-container-inner;
+  margin: 0 auto;
+
+  .research-title {
+    @extend %style-hero-content-title;
+  }
+
+  .research-desc {
+    @extend %style-hero-content;
+  }
+}
+
+.container-outer {
+  width: $width-container-outer;
+  @extend %style-container-outer;
+
+  .research-topic {
+    @extend %style-content-title;
+  }
+
+  .main-content {
+    @extend %style-content;
+
+    .image-cna-1-face {
+      background: url("#{$root-path}/image/CNA_1.png") 0 0;
+      width: 470px;
+      height: 225px;
+      margin: 40px 0;
+    }
+
+    .image-cna-1-brain {
+      background: url("#{$root-path}/image/CNA_1.png") 0 -223px;
+      width: 470px;
+      height: 230px;
+      margin: 0 0 40px;
+    }
+
+    .image-cna-2-plot {
+      background: url("#{$root-path}/image/CNA_2.png") 0 0;
+      width: 1024px;
+      height: 449px;
+    }
+  }
+
+  .associated-content {
+    .associated-content-title {
+      @extend %style-associated-content-text;
+      font-weight: bold;
+      color: $color-main-dark;
+    }
+
+    .accociated-content-text {
+      p {
+        @extend %style-associated-content-text;
+
+        .journal {
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+/****following is the dropdown effect******/
+.accordion {
+  cursor: pointer;
+}
+
+.panel {
+  display: none;
+
+  .container-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .main-content {
+      flex: 0 0 60%;
+    }
+
+    .associated-content {
+      flex: 0 0 250px;
+    }
+  }
+}
+/****following is images******/

@@ -1,0 +1,74 @@
+@import "variables_research";
+
+.container-inner {
+  width: $width-container-inner;
+  margin: 0 auto;
+
+  .experiment-title {
+    @extend %style-hero-content-title;
+  }
+
+  .experiment-desc {
+    @extend %style-hero-content;
+  }
+}
+
+.exp-container-outer {
+  width: $width-container-outer;
+  @extend %style-exp-container-outer;
+
+  .experiment-topic {
+    @extend %style-content-title;
+  }
+
+  .experiment-content {
+    @extend %style-content;
+  }
+}
+/****** following is the dropdown effect****/
+.accordion {
+  cursor: pointer;
+}
+
+.panel {
+  display: none;
+
+  .container-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+/********* panel style *******/
+.experiment-detail {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid $color-main-dark;
+  padding-top: 30px;
+
+  .exp-order {
+    flex: 0 0 100px;
+    @extend %style-exp-order;
+  }
+
+  .exp-summary {
+    flex: 0 0 200px;
+
+    .exp-name {
+      @extend %style-exp-name;
+    }
+
+    .exp-time-location {
+      @extend %style-exp-time-location;
+
+      .material-icons {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .exp-desc {
+    flex: 0 0 350px;
+    @extend %style-exp-summary;
+  }
+}
