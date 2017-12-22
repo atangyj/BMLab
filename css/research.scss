@@ -96,25 +96,23 @@ header {
     }
   }
 }
-/****following is images*****
+/****following is images***/
 .image-cna-1-face {
   background: url("#{$root-path}/image/CNA_1.png") 0 0;
-  width: 470px;
+  width: 300px;
   height: 225px;
   margin: 40px 0;
 }
 
 .image-cna-1-brain {
   background: url("#{$root-path}/image/CNA_1.png") 0 -223px;
-  width: 470px;
+  width: 300px;
   height: 230px;
   margin: 0 0 40px;
 }
 
 .image-cna-2-plot {
   background: url("#{$root-path}/image/CNA_2.png") 0 0;
-  width: 1024px;
+  width: 300px;
   height: 449px;
 }
-
-***/
