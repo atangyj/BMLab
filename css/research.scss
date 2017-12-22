@@ -88,6 +88,7 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-bottom: $padding-panel-content;
 
     .main-content {
       flex: 0 0 60%;
@@ -98,23 +99,43 @@ header {
     }
   }
 }
-/****following is images***/
+/****following is images**/
 .image-cna-1-face {
-  background: url("#{$root-path}/image/CNA_1.png") 0 0;
-  width: 300px;
-  height: 225px;
-  margin: 40px 0;
+  background: url("#{$root-path}/image/CNA_1_1.png") 0 0 no-repeat;
+  width: 80%;
+  padding-bottom: 40%;
+  background-size: contain;
+  margin: 30px auto;
 }
 
 .image-cna-1-brain {
-  background: url("#{$root-path}/image/CNA_1.png") 0 -223px;
-  width: 300px;
-  height: 230px;
-  margin: 0 0 40px;
+  background: url("#{$root-path}/image/CNA_1_2.png") 0 0 no-repeat;
+  width: 80%;
+  padding-bottom: 40%;
+  background-size: contain;
+  margin: 30px auto;
 }
 
 .image-cna-2-plot {
-  background: url("#{$root-path}/image/CNA_2.png") 0 0;
-  width: 300px;
-  height: 449px;
+  background: url("#{$root-path}/image/CNA_2.png") 0 0 no-repeat;
+  width: 100%;
+  padding-bottom: 50%;
+  background-size: contain;
+  margin: 30px auto;
+}
+
+.image-ccn-1 {
+  background: url("#{$root-path}/image/CCN_1.png") 0 0 no-repeat;
+  width: 80%;
+  padding-bottom: 60%;
+  background-size: contain;
+  margin: 30px auto;
+}
+
+.image-ccn-2 {
+  background: url("#{$root-path}/image/CCN_2.png") 0 0 no-repeat;
+  width: 100%;
+  padding-bottom: 32%;
+  background-size: contain;
+  margin: 30px auto;
 }

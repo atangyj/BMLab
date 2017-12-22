@@ -46,12 +46,14 @@ header .menu a {
 
 .main-content p {
   font-size: 16px;
-  line-height: 24px; }
+  line-height: 24px;
+  color: #5c5c5c; }
 
-.associated-content .associated-content-title, .associated-content .associated-content-text p {
+.associated-content .associated-content-title, .associated-content .accociated-content-text p {
   font-size: 16px;
   line-height: 24px;
-  padding-bottom: 15px; }
+  padding-bottom: 15px;
+  color: #5c5c5c; }
 
 /***** participants *****/
 /****** RESET *****/
@@ -80,10 +82,8 @@ html {
 .associated-content .associated-content-title {
   font-weight: bold;
   color: #0a199c; }
-.associated-content .associated-content-text p .journal {
-  font-style: italic;
-  font-size: 14px;
-  color: #5c5c5c; }
+.associated-content .accociated-content-text p .journal {
+  font-style: italic; }
 
 /****following is the dropdown effect******/
 .accordion {
@@ -95,47 +95,28 @@ html {
     display: none;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    padding-bottom: 100px; }
+    flex-wrap: wrap; }
     .panel .container-inner .main-content {
       flex: 0 0 60%; }
     .panel .container-inner .associated-content {
       flex: 0 0 250px; }
 
-/****following is images**/
+/****following is images***/
 .image-cna-1-face {
-  background: url("../image/CNA_1_1.png") 0 0 no-repeat;
-  width: 80%;
-  padding-bottom: 40%;
-  background-size: contain;
-  margin: 30px auto; }
+  background: url("../image/CNA_1.png") 0 0;
+  width: 300px;
+  height: 225px;
+  margin: 40px 0; }
 
 .image-cna-1-brain {
-  background: url("../image/CNA_1_2.png") 0 0 no-repeat;
-  width: 80%;
-  padding-bottom: 40%;
-  background-size: contain;
-  margin: 30px auto; }
+  background: url("../image/CNA_1.png") 0 -223px;
+  width: 300px;
+  height: 230px;
+  margin: 0 0 40px; }
 
 .image-cna-2-plot {
-  background: url("../image/CNA_2.png") 0 0 no-repeat;
-  width: 100%;
-  padding-bottom: 50%;
-  background-size: contain;
-  margin: 30px auto; }
-
-.image-ccn-1 {
-  background: url("../image/CCN_1.png") 0 0 no-repeat;
-  width: 80%;
-  padding-bottom: 60%;
-  background-size: contain;
-  margin: 30px auto; }
-
-.image-ccn-2 {
-  background: url("../image/CCN_2.png") 0 0 no-repeat;
-  width: 100%;
-  padding-bottom: 32%;
-  background-size: contain;
-  margin: 30px auto; }
+  background: url("../image/CNA_2.png") 0 0;
+  width: 300px;
+  height: 449px; }
 
 /*# sourceMappingURL=research.css.map */
