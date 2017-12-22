@@ -1,0 +1,122 @@
+/***** COMMON *****/
+header {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(10, 25, 156, 0.9);
+  position: fixed;
+  box-shadow: 0 1px 5px #000;
+  z-index: 10; }
+
+header .menu {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end; }
+
+header .menu a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 50px;
+  padding-left: 50px; }
+
+.member-desc {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 90px;
+  padding: 150px 0 50px; }
+
+.main-people .person {
+  font-size: 16px;
+  line-height: 24px; }
+
+.other-people h3, .other-people .side-bar-alumni p, .other-people .side-bar-collaborator p {
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 15px; }
+
+/***** participants *****/
+/***** publication *****/
+/****** RESET *****/
+/******************/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Heebo', sans-serif; }
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7; }
+
+/*****************************/
+/**********COMMON*************/
+/*****************************/
+.container-inner {
+  width: 80%;
+  margin: 0 auto; }
+
+.member-desc {
+  padding-bottom: 100px; }
+
+.main-people {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.main-people .person {
+  margin-bottom: 60px;
+  padding: 20px;
+  cursor: pointer; }
+
+.main-people .person img {
+  width: 200px;
+  padding-bottom: 15px;
+  filter: grayscale(100%); }
+
+.main-people .person img[src*="noPhoto"] {
+  opacity: 0.2; }
+
+.main-people .person span::before {
+  content: " "; }
+
+.other-people {
+  display: flex;
+  justify-content: space-between; }
+  .other-people h3 {
+    font-weight: bold;
+    color: #0a199c; }
+  .other-people .side-bar-collaborator {
+    margin-left: 40px; }
+
+/***** following is hover effect ***/
+.person {
+  position: relative; }
+  .person .personal-detail {
+    visibility: hidden;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: rgba(10, 25, 156, 0.8);
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+
+.person:hover .personal-detail {
+  visibility: visible; }
+
+.intro-long {
+  overflow: scroll; }
+
+.office-contact {
+  padding-top: 10px;
+  font-size: 14px; }
+
+/*# sourceMappingURL=member.css.map */

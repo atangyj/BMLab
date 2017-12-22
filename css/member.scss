@@ -1,0 +1,126 @@
+@import "variables_research";
+/****** RESET *****/
+/******************/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Heebo', sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: $color-bg;
+}
+/*****************************/
+/**********COMMON*************/
+/*****************************/
+header {
+  @extend %style-header;
+
+  .menu {
+    @extend %style-menu;
+
+    a {
+      @extend %style-menu-item;
+    }
+  }
+}
+
+.container-inner {
+  width: $width-container-inner;
+  margin: 0 auto;
+}
+
+.member-desc {
+  @extend %style-hero-content-title;
+  padding-bottom: 100px;
+}
+
+.main-people {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main-people .person {
+  margin-bottom: 60px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.main-people .person img {
+  width: 200px;
+  padding-bottom: 15px;
+  filter: grayscale(100%);
+}
+
+.main-people .person img[src*="noPhoto"] {
+  opacity: 0.2;
+}
+
+.main-people .person span::before {
+  content: " ";
+}
+
+.main-people .person {
+  @extend %style-content;
+}
+
+.other-people {
+  display: flex;
+  justify-content: space-between;
+
+  h3 {
+    @extend %style-associated-content-text;
+    font-weight: bold;
+    color: $color-main-dark;
+  }
+
+  .side-bar-alumni {
+    p {
+      @extend %style-associated-content-text;
+    }
+  }
+
+  .side-bar-collaborator {
+    p {
+      @extend %style-associated-content-text;
+    }
+    margin-left: 40px;
+  }
+}
+/***** following is hover effect ***/
+.person {
+  position: relative;
+
+  .personal-detail {
+    visibility: hidden;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: rgba(10,25,156,0.8);
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.person:hover .personal-detail {
+  visibility: visible;
+}
+
+.intro-long {
+  overflow: scroll;
+}
+
+.office-contact {
+  padding-top: 10px;
+  font-size: 14px;
+}
