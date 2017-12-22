@@ -1,0 +1,70 @@
+@import "variables_research";
+/****** RESET *****/
+/******************/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Heebo', sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: $color-bg;
+}
+/*****************************/
+/**********COMMON*************/
+/*****************************/
+header {
+  @extend %style-header;
+
+  .menu {
+    @extend %style-menu;
+
+    a {
+      @extend %style-menu-item;
+    }
+  }
+}
+
+.container-inner {
+  width: $width-container-inner;
+  margin: 0 auto;
+
+  .publication-title {
+    @extend %style-hero-content-title;
+  }
+
+  .publication-content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+
+    .article-left-column,
+    .article-right-column {
+      box-sizing: border-box;
+      margin-right: 100px;
+    }
+
+    h3 {
+      @extend %style-associated-content-text;
+      font-weight: bold;
+      color: $color-main-dark;
+    }
+
+    p {
+      @extend %style-associated-content-text;
+
+      a {
+        text-decoration: none;
+        color: $color-main-reading;
+      }
+
+      .conference,
+      .journal {
+        @extend %style-journal;
+      }
+    }
+  }
+}

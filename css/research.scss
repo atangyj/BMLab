@@ -68,9 +68,7 @@ header {
       @extend %style-associated-content-text;
 
       .journal {
-        font-style: italic;
-        font-size: 14px;
-        color: $color-main-reading;
+        @extend %style-journal;
       }
     }
   }

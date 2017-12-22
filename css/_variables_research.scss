@@ -6,6 +6,7 @@ $color-main-reading: rgb(92,92,92);
 $width-container-inner: 80%;
 $width-container-outer: 100%;
 $padding-panel-content: 100px;
+$padding-publication-content: 15px;
 
 %style-header {
   width: 100%;
@@ -69,6 +70,13 @@ $padding-panel-content: 100px;
   line-height: 24px;
   padding-bottom: 15px;
 }
+
+%style-journal {
+  font-style: italic;
+  font-size: 14px;
+  font-weight: lighter;
+  color: $color-main-reading;
+}
 /***** participants *****/
 %style-exp-container-outer {
   border-top: 5px solid $color-main-dark;
@@ -91,3 +99,4 @@ $padding-panel-content: 100px;
   font-size: 16px;
   line-height: 24px;
 }
+/***** publication *****/
