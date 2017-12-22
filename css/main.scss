@@ -6,42 +6,46 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  /*border: 1px solid red;*/
+  font-family: 'Rubik', sans-serif;
 }
 
 body,
 html {
   width: 100%;
   height: 100%;
-  background-color: rgb(247,247,247);
+  background-color: $color-bg;
 }
 /******************/
 /*** COMMON *******/
 /******************/
-header {
+.header {
   width: 100%;
   height: 50px;
-  background-color: $color-header-opacity;
+  background-color: $color-main-dark;
   position: fixed;
   box-shadow: 0 1px 5px #000;
   z-index: 10;
 }
 
 .nav-bar {
-  width: $width-grid-container;
+  width: $width-container-inner;
   margin: 0 auto;
   display: flex;
   justify-content: flex-end;
 
   a {
-    @extend %style-header-nav;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 50px;
+    color: #fff;
+    padding: 0 25px;
   }
 }
 
 .grid-container {
   display: grid;
-  width: $width-grid-container;
+  width: $width-container-inner;
   height: auto;
   margin: 0 auto;
   grid-template-columns: repeat(12, 1fr);
@@ -134,7 +138,7 @@ header {
 /*************************************************************/
 /******* RESEARCH ********************************************/
 /*************************************************************/
-.research-title {
+/***.research-title {
   grid-column: 1 / span 7;
   @extend %style-main-title;
   margin-top: $height-margin-top-main-title;
@@ -197,10 +201,11 @@ header {
     font-style: italic;
   }
 }
+***/
 /**************************************/
 /************ RESEARCH 2 ******************/
 /**************************************/
-.image-ccn-1 {
+/***.image-ccn-1 {
   background: url("#{$root-path}/image/CCN_1.png") 0 0 no-repeat;
   width: 400px;
   height: 300px;
@@ -215,6 +220,7 @@ header {
   background-size: 100%;
   padding-bottom: 30px;
 }
+***/
 /**************************************/
 /************ MEMBER ******************/
 /**************************************/
