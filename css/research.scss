@@ -1,4 +1,4 @@
-@import "variables_research";
+@import "variables";
 /****** RESET *****/
 /******************/
 * {
@@ -18,6 +18,12 @@ html {
 /*****************************/
 header {
   @extend %style-header;
+
+  .home {
+    @extend %style-menu-item;
+    padding-left: 0;
+    float: left;
+  }
 
   .menu {
     @extend %style-menu;

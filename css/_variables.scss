@@ -1,37 +1,117 @@
-$width-grid-container: 80%;
-$width-column-gap: 40px;
-$width-photo: 80%;
-$height-photo: auto;
-$height-margin-top-main-title: 200px;
-/*****************/
-/**** COLOR ******/
-/*****************/
-$color-bg: rgb(247,247,247);
-$color-header: rgb(10,25,156);
-$color-font-journal: grey;
-$color-font-main-nav: #fff;
-$color-header-opacity: rgba(10,25,156, 0.9);
-/*****************/
-/**** FONT *******/
-/*****************/
-$font-size-nav: 60px;
-$font-size-side-title: 16px;
-$font-size-news-content: 16px;
-$font-size-main-title: 40px;
-$font-size-publication-content: 16px;
-$font-type-nav: 'Roboto', sans-serif;
-$font-type-side-bar: 'Roboto', sans-serif;
-/*****************/
-/**** LAYOUT *****/
-/*****************/
-$padding-news-content: 15px;
-$padding-publication-content: 15px;
-$padding-side-bar-title: 15px;
-$padding-main-title: 60px;
-$height-news-content: 22px;
-$height-research-content: 22px;
-/*$column-width:;
-$column-gap-width:;
-$row-width:;
-$row-gap-width:;*/
+/***** COMMON *****/
 $root-path: "..";
+$color-bg: rgb(247,247,247);
+$color-main-dark: rgb(10,25,156);
+$color-main-reading: rgb(92,92,92);
+$width-container-inner: 80%;
+$width-container-outer: 100%;
+$padding-panel-content: 100px;
+$padding-publication-content: 15px;
+
+%style-home-button {
+  width: 100px;
+  height: 40px;
+  color: $color-bg;
+  border: 2px solid $color-bg;
+  text-align: center;
+  line-height: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+%style-header {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(10,25,156,0.9);
+  position: fixed;
+  box-shadow: 0 1px 5px #000;
+  z-index: 10;
+}
+
+%style-menu {
+  float: right;
+}
+
+%style-menu-item {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 50px;
+  padding-left: 50px;
+}
+
+%style-hero-content-title {
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 80px;
+  padding: 150px 0 50px;
+}
+
+%style-hero-content {
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 50px;
+  padding: 0 0 100px;
+}
+
+%style-container-outer {
+  border-top: 5px solid $color-main-dark;
+}
+
+%style-content-title {
+  font-size: 40px;
+  font-weight: bolder;
+  line-height: 50px;
+  padding: 30px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+%style-content {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+%style-associated-content-text {
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 15px;
+}
+
+%style-journal {
+  font-style: italic;
+  font-size: 14px;
+  font-weight: lighter;
+  color: $color-main-reading;
+}
+/***** participants *****/
+%style-exp-container-outer {
+  border-top: 5px solid $color-main-dark;
+}
+
+%style-exp-detail-container {
+  border-bottom: 1px solid $color-main-dark;
+  padding: 40px 0;
+}
+
+%style-exp-order {
+  font-size: 40px;
+}
+
+%style-exp-name {
+  font-size: 28px;
+}
+
+%style-exp-time-location {
+  font-size: 13px;
+  padding-top: 12px;
+}
+
+%style-exp-summary {
+  font-size: 16px;
+  line-height: 24px;
+  box-sizing: border-box;
+  padding: 2px 0 0 10px;
+}
+/***** publication *****/

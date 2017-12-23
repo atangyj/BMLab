@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="./css/home.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Heebo:300,400,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <div class="main">
+    <div class="lab-name">Brain & Mind Laboratory</div>
+    <a href="./research.html">
+      <div class="action-desc">
+        <div>explore our study</div>
+        <i class="material-icons">arrow_forward</i>
+      </div>
+    </a>
+  </div>
+  <div class="news-accordion accordion">news</div>
+  <div class="news-panel panel">
+    <p class="news-content">Dr. Angela Gutchess visits BML!<br><span class="news-date">2 Aug 2017</span></p>
+    <p class="news-content">Chi-Chuan Chen Graduates!!!<br><span class="news-date">31 Jul 2017</span></p>
+    <p class="news-content">Alice Lagebrant (from Sweden) & Anna Jacobsen (from Denmark) join our lab for this summer!<br>
+      <span class="news-date">12 Jul 2017</span></p>
+    <p class="news-content">Yu-Shiang Su enters the TIGP-NTU doctoral program<br><span class="news-date">15 May 2017</span></p>
+    <p class="news-content">Job Opening<br><span class="news-date">26 Jan 2017</span></p>
+  </div>
+
+  <div class="contact accordion">contact</div>
+  <div class="contact-detail panel">
+    <div>
+      ntubmlab@gmail.com<br> Tel: +886-2-2321-9581<br> Fax: +886-2-2322-4814
+    </div>
+    <div class="address">
+      Graduate Institute of Brain and Mind Sciences<br> National Taiwan University College of Medicine<br> Section 1, No. 1 Ren-ai Rd<br> 15th floor, Rm 1554<br> Zhongzheng District, Taipei 10051<br> Taiwan
+    </div>
+  </div>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+
+</body>
+
+</html>

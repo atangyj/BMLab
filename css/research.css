@@ -8,12 +8,9 @@ header {
   z-index: 10; }
 
 header .menu {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-end; }
+  float: right; }
 
-header .menu a {
+header .home, header .menu a {
   color: #fff;
   font-size: 16px;
   text-decoration: none;
@@ -22,9 +19,9 @@ header .menu a {
   padding-left: 50px; }
 
 .container-inner .research-title {
-  font-size: 60px;
-  font-weight: bold;
-  line-height: 90px;
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 80px;
   padding: 150px 0 50px; }
 
 .container-inner .research-desc {
@@ -53,7 +50,14 @@ header .menu a {
   line-height: 24px;
   padding-bottom: 15px; }
 
+.associated-content .associated-content-text p .journal {
+  font-style: italic;
+  font-size: 14px;
+  font-weight: lighter;
+  color: #5c5c5c; }
+
 /***** participants *****/
+/***** publication *****/
 /****** RESET *****/
 /******************/
 * {
@@ -70,6 +74,10 @@ html {
 /*****************************/
 /**********COMMON*************/
 /*****************************/
+header .home {
+  padding-left: 0;
+  float: left; }
+
 .container-inner {
   width: 80%;
   margin: 0 auto; }
@@ -80,10 +88,6 @@ html {
 .associated-content .associated-content-title {
   font-weight: bold;
   color: #0a199c; }
-.associated-content .associated-content-text p .journal {
-  font-style: italic;
-  font-size: 14px;
-  color: #5c5c5c; }
 
 /****following is the dropdown effect******/
 .accordion {

@@ -1,0 +1,78 @@
+/***** COMMON *****/
+.news-accordion, .contact {
+  width: 100px;
+  height: 40px;
+  color: #f7f7f7;
+  border: 2px solid #f7f7f7;
+  text-align: center;
+  line-height: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+.news-panel, .contact-detail {
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 15px; }
+
+/***** participants *****/
+/***** publication *****/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Heebo', sans-serif; }
+
+body,
+html {
+  background-color: #0a199c;
+  color: #fff; }
+
+.main {
+  position: absolute;
+  top: 35%;
+  left: 50%; }
+  .main .lab-name {
+    font-size: 80px; }
+  .main a {
+    text-decoration: none;
+    color: #fff; }
+    .main a .action-desc {
+      display: flex;
+      align-items: center;
+      margin-top: 16px; }
+      .main a .action-desc .material-icons {
+        padding-left: 10px; }
+
+.news-accordion {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer; }
+
+.contact {
+  position: absolute;
+  bottom: 20px;
+  left: 20px; }
+
+.news-panel {
+  display: none;
+  width: 250px;
+  position: absolute;
+  top: 20px;
+  left: 150px;
+  border: 2px solid #f7f7f7;
+  padding: 30px 15px; }
+  .news-panel p {
+    padding-bottom: 15px; }
+
+.contact-detail {
+  display: none;
+  width: 350px;
+  position: absolute;
+  bottom: 20px;
+  left: 150px;
+  border: 2px solid #f7f7f7;
+  padding: 30px 15px; }
+  .contact-detail .address {
+    margin-top: 50px; }
+
+/*# sourceMappingURL=home.css.map */

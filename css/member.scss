@@ -1,4 +1,4 @@
-@import "variables_research";
+@import "variables";
 /****** RESET *****/
 /******************/
 * {
@@ -19,6 +19,12 @@ html {
 header {
   @extend %style-header;
 
+  .home {
+    @extend %style-menu-item;
+    padding-left: 0;
+    float: left;
+  }
+
   .menu {
     @extend %style-menu;
 
@@ -35,7 +41,13 @@ header {
 
 .member-desc {
   @extend %style-hero-content-title;
+  font-weight: normal;
+  font-size: 60px;
   padding-bottom: 100px;
+}
+
+.wording-em {
+  text-decoration: underline;
 }
 
 .main-people {
@@ -66,11 +78,16 @@ header {
 
 .main-people .person {
   @extend %style-content;
+
+  .name {
+    color: $color-main-dark;
+  }
 }
 
 .other-people {
   display: flex;
   justify-content: space-between;
+  margin: 80px 0;
 
   h3 {
     @extend %style-associated-content-text;
